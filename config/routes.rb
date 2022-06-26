@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  #match 'todos', :to => 'todos#index', :via => :get
-  get 'todos', to: "todos#index"
+  # root  'todos#index'
+  match 'todos/index', :to => 'todos#index', :via => :get 
+  match '/create', :to => 'todos#create', :via => :post
+  get '/delete/:id' => 'todos#delete', as: :delete
+  get '/complete/:id' => 'todos#complete', as: :complete
+
+  resources :todos
+
 end
