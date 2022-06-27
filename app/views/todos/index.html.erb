@@ -1,9 +1,13 @@
 <h1>Finish It Of!!</h1>
 <form action="/create" method="post">
-<input type = "hidden" name="authenticity_token" value=<%= form_authenticity_token%>>
+    <input type = "hidden" name="authenticity_token" value=<%= form_authenticity_token%>>
+<label>Task</label>
 <input type = "text" name="todo_models[task]" placeholder="Task">
+<label>Description</label>
 <input type="text" name="todo_models[description]" placeholder="Description">
-<input type="text" name="todo_models[status]" placeholder="Status"> 
+<%# <label>Status</label>
+<input type="text" name="todo_models[status]" placeholder="Status">  %>
+<label>Date</label>
 <input type="date" name="todo_models[date]">
 <button>Submit</button> 
 </form>

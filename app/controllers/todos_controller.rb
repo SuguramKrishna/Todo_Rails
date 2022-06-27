@@ -2,15 +2,6 @@ class TodosController < ApplicationController
     def index
        @todos = TodoModel.all
     end
-
-
-    def delete 
-        @del = TodoModel.find(params[:id]) 
-        if @del.destroy 
-          @todos=TodoModel.all
-          render "todos/show" 
-        end
-    end
     
 
     def create 
@@ -22,13 +13,23 @@ class TodosController < ApplicationController
     end
 
     def complete 
-        @comp = TodoModel.find(params[:id])    
-        @comp[:status] = true    
-        if@comp.save  
+        @complete = TodoModel.find(params[:id])    
+        @complete[:status] = true    
+        if@complete.save  
           @todos=TodoModel.all
           render "todos/show" 
         end
     end
+
+    def delete 
+      @del = TodoModel.find(params[:id]) 
+      if @del.destroy 
+        @todos=TodoModel.all
+        render "todos/show" 
+      end
+    end
+
+    
 
     private
 

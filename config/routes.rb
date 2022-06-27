@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   match '/create', :to => 'todos#create', :via => :post
   get '/delete/:id' => 'todos#delete', as: :delete
   get '/complete/:id' => 'todos#complete', as: :complete
+  # match 'todos/update/:id', to: 'todos#update', via: :get
 
   resources :todos
 

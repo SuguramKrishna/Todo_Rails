@@ -5,7 +5,6 @@ class CreateTodoModels < ActiveRecord::Migration[6.1]
       t.string :Description
       t.boolean :Status
       t.date :Date
-
       t.timestamps
     end
   end

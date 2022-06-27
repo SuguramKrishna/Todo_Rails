@@ -2,10 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 *{
-    background-color: lightblue;
+    background-color: whitesmoke;
 }
 
 input{
     margin-left: 20px;
+
 }
 
+.h1{
+    color: black;
+}
+
+label{
+    font-size: 20px;
+}
+
+.btn_grn{
+    outline: none;
+    cursor: pointer;
+}
+
+.btn_red{
+    cursor: not-allowed;
+}
