@@ -8,8 +8,11 @@ class TodosController < ApplicationController
         @todo=TodoModel.new(todo_params)
         if @todo.save
           @todos=TodoModel.all
-          render "todos/show"
+          redirect_to shows_path
+        else
+          render plain: "Fail" 
         end
+  
     end
 
     def complete 
@@ -27,6 +30,10 @@ class TodosController < ApplicationController
         @todos=TodoModel.all
         render "todos/show" 
       end
+     
+    end
+    def show
+      @todos = TodoModel.all
     end
 
     
