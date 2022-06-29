@@ -20,7 +20,7 @@ class TodosController < ApplicationController
         @complete[:status] = true    
         if@complete.save  
           @todos=TodoModel.all
-          render "todos/show" 
+          redirect_to shows_path
         end
     end
 
@@ -28,7 +28,7 @@ class TodosController < ApplicationController
       @del = TodoModel.find(params[:id]) 
       if @del.destroy 
         @todos=TodoModel.all
-        render "todos/show" 
+        redirect_to shows_path
       end
      
     end

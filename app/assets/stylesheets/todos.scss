@@ -11,9 +11,7 @@ input {
     background-color: transparent;
 }
 
-.h1 {
-    color: black;
-}
+
 
 label {
     font-size: 20px;
@@ -21,11 +19,37 @@ label {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 50% 50%;
+    width: 100%;
     padding: 5px;
 }
 
 .grid-item {
     border: .5px solid rgba(227, 221, 221, 0.8);
     padding: 10px;
+    margin: 5px;
 }
+
+.grid-item:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 2px 3px #17a2b8;
+}
+
+.iputdiv{
+    display: flex; 
+    justify-content: space-between;
+    text-align: center;
+}
+
+.p_heading{
+    font-family: 'Gambetta', serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.input_values{
+    font-family: 'Gambetta', serif;
+    font-weight: normal;
+    margin-left: 300px;
+    font-size: 20px;
+}
+
